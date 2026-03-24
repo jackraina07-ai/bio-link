@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profilo - Giacomo Raina</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* 1. CONFIGURAZIONE GENERALE */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #f3f4f6;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 20px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 2. STILE INTESTAZIONE */
+header {
+text-align: center;
+}
+
+.profile-img {
+width: 110px;
+height: 110px;
+border-radius: 50%;
+border: 4px solid white;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+margin: 15px 0 5px;
+font-size: 22px;
+color: #2c3e50;
+}
+
+header p {
+color: #7f8c8d;
+}
+
+/* 3. PULSANTE TEMA */
+.theme-switch {
+margin-bottom: 20px;
+}
+
+#theme-toggle {
+padding: 10px 15px;
+background-color: #3498db;
+color: white;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+background-color: #2980b9;
+transform: scale(1.05);
+}
+
+/* 4. CONTENITORE BOTTONI */
+.container {
+width: 100%;
+max-width: 420px;
+margin-top: 30px;
+}
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #ffffff;
+color: #333;
+text-decoration: none;
+padding: 18px;
+margin-bottom: 12px;
+border-radius: 12px;
+font-weight: 500;
+transition: all 0.3s ease;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn i {
+margin-right: 12px;
+font-size: 1.3rem;
+}
+
+/* HOVER */
+.btn:hover {
+background-color: #3498db;
+color: white;
+transform: translateY(-3px);
+box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* FOOTER */
+footer {
+margin-top: 40px;
+text-align: center;
+color: #7f8c8d;
+font-size: 14px;
+}
+
+/* DARK MODE */
+body.dark-mode {
+background-color: #1a1a1a;
+color: #ffffff;
+}
+
+body.dark-mode h1 {
+color: #ffffff;
+}
+
+body.dark-mode header p {
+color: #b0b0b0;
+}
+
+body.dark-mode .btn {
+background-color: #333;
+color: #fff;
+border: 1px solid #555;
+}
+
+body.dark-mode .btn:hover {
+background-color: #3498db;
+}
+
+body.dark-mode footer {
+color: #b0b0b0;
+}
+</style>
+</head>
+
+<body>
+
+<div class="theme-switch">
+<button id="theme-toggle">🌙 Modalità Notte</button>
+</div>
+
+<header>
+<img src="https://i.imgur.com/lNdwrJY.jpeg" class="profile-img">
+<h1>@Giacomo Raina</h1>
+<p>Studente Liceo scientifico</p>
+</header>
+
+<main class="container">
+<a href="https://torricellimi.edu.it/" target="_blank" class="btn">
+Profilo scolastico
+</a>
+
+<a href="https://www.unimib.it/studiare/corsi-laurea-iscrizioni/area-economico-statistica-laurea-triennale" target="_blank" class="btn">
+Università
+</a>
+
+<a href="https://linkedin.com" target="_blank" class="btn">
+<i class="fab fa-linkedin"></i> Profilo Professionale
+</a>
+
+<a href="https://instagram.com" target="_blank" class="btn">
+<i class="fab fa-instagram"></i> Profilo Instagram
+</a>
+
+<a href="mailto:giacomoraina@teamdigitale.torricellimi.edu.it" class="btn">
+<i class="fas fa-envelope"></i> Inviami una Email
+</a>
+</main>
+
+<footer>
+<p>Realizzato con ❤️ per il corso di Informatica</p>
+</footer>
+
+<script>
+const pulsante = document.getElementById('theme-toggle');
+const corpo = document.body;
+
+// Carica tema salvato
+if (localStorage.getItem('theme') === 'dark') {
+corpo.classList.add('dark-mode');
+pulsante.innerText = "☀️ Modalità Luce";
+}
+
+pulsante.addEventListener('click', () => {
+corpo.classList.toggle('dark-mode');
+
+if (corpo.classList.contains('dark-mode')) {
+pulsante.innerText = "☀️ Modalità Luce";
+localStorage.setItem('theme', 'dark');
+} else {
+pulsante.innerText = "🌙 Modalità Notte";
+localStorage.setItem('theme', 'light');
+}
+});
+</script>
+
+</body>
+</html>
