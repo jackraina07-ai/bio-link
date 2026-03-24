@@ -1,2 +1,99 @@
 # bio-link
 il mio linktree
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Profilo - Giacomo Raina</title>
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+/* 1. CONFIGURAZIONE GENERALE */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Poppins', sans-serif;
+background-color: #f3f4f6;
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 40px 20px;
+transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 2. STILE INTESTAZIONE */
+header {
+text-align: center;
+}
+
+.profile-img {
+width: 110px;
+height: 110px;
+border-radius: 50%;
+border: 4px solid white;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+margin: 15px 0 5px;
+font-size: 22px;
+color: #2c3e50;
+}
+
+header p {
+color: #7f8c8d;
+}
+
+/* 3. PULSANTE TEMA */
+.theme-switch {
+margin-bottom: 20px;
+}
+
+#theme-toggle {
+padding: 10px 15px;
+background-color: #3498db;
+color: white;
+border: none;
+border-radius: 8px;
+cursor: pointer;
+font-size: 14px;
+font-weight: 500;
+transition: all 0.3s ease;
+}
+
+#theme-toggle:hover {
+background-color: #2980b9;
+transform: scale(1.05);
+}
+
+/* 4. CONTENITORE BOTTONI */
+.container {
+width: 100%;
+max-width: 420px;
+margin-top: 30px;
+}
+
+.btn {
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #ffffff;
+color: #333;
+text-decoration: none;
+padding: 18px;
+margin-bottom: 12px;
+border-radius: 12px;
+font-weight: 500;
+transition: all 0.3s ease;
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
